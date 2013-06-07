@@ -1,0 +1,208 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #000000;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+#intro {
+	position: absolute;
+	overflow: hidden;
+}
+
+#triangle-1 {
+	width: 366px;
+	height: 664px;
+	background: url(../imgs/triangles/triangle_1.png);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+#triangle-2 {
+	width: 577px;
+	height: 384px;
+	background: url(../imgs/triangles/triangle_2.png);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#triangle-3 {
+	width: 368px;
+	height: 667px;
+	background: url(../imgs/triangles/triangle_3.png);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#triangle-4 {
+	width: 835px;
+	height: 667px;
+	background: url(../imgs/triangles/triangle_4.png);
+	position: absolute;
+	top: 0px;
+	left: 182px;
+}
+
+#triangle-5 {
+	width: 1022px;
+	height: 204px;
+	background: url(../imgs/triangles/triangle_5.png);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#triangle-6 {
+	width: 809px;
+	height: 462px;
+	background: url(../imgs/triangles/triangle_6.png);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+#triangle-7 {
+	width: 1022px;
+	height: 666px;
+	background: url(../imgs/triangles/triangle_7.png);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#triangle-8 {
+	width: 836px;
+	height: 666px;
+	background: url(../imgs/triangles/triangle_8.png);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#triangle-9 {
+	width: 182px;
+	height: 666px;
+	background: url(../imgs/triangles/triangle_9.png);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#triangle-10 {
+	width: 816px;
+	height: 277px;
+	background: url(../imgs/triangles/triangle_10.png);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#content {
+	position: absolute;
+}
+
+#clock {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: none;
+}
+
+#logo {
+	width: 228px;
+	height: 172px;
+	position: absolute;
+	display: none;
+}
+
+#singleLogo {
+	width: 228px;
+	height: 172px;
+	position: absolute;
+	display: none;
+}
+
+.base {
+    background: url(../imgs/logo/logo_base.png);
+}
+
+.islam {
+	background: url(../imgs/logo/Islam.png);
+}
+
+.christianity {
+	background: url(../imgs/logo/Christianity.png);
+}
+
+.judaism {
+	background: url(../imgs/logo/Judaism.png);
+}
+
+.islam_christianity {
+	background: url(../imgs/logo/Islam_Christianity.png);
+}
+
+.christianity_judaism {
+	background: url(../imgs/logo/Christianity_Judaism.png);
+}
+
+.islam_judaism {
+	background: url(../imgs/logo/Islam_Judaism.png);
+}
+
+.islam_christianity_judaism {
+	background: url(../imgs/logo/Islam_Christianity_Judaism.png);
+}
+
+#arrow-down {
+	width: 28px;
+	height: 12px;
+	background: url(../imgs/arrow_down.png);
+	position: fixed;
+	bottom: 20px;
+	display: none;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+/* Mobile portrait */
+@media only screen and (max-device-width : 320px) {
+
+}
+
+/* Mobile landscape */
+@media only screen and (min-device-width : 321px) and (max-device-width : 480px) {
+
+}
+
+/* Small tablet */
+@media only screen and (min-device-width : 481px) and (max-device-width : 600px) {
+
+}
+
+/* Tablet portrait */
+@media only screen and (min-device-width : 601px) and (max-device-width : 768px) {
+	
+}
+
+/* Tablet landscape or Netbook */
+@media only screen and (min-device-width : 769px) and (max-device-width : 1024px) {
+	
+}
+
+/* Desktop */
+@media only screen and (min-device-width : 1025px) and (max-device-width : 1280px) {
+	
+}
+
+/* Small tablet */
+@media only screen and (max-device-width : 1281px) {
+	
+}
