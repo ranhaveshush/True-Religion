@@ -1,4 +1,4 @@
-var curr = 0;
+var _prayerTimeDelta = 5;
 
 function clock() {
 	var now = new Date();
@@ -19,52 +19,15 @@ function clock() {
 	setTimeout('clock()', 995);
 }
 
-function introAnimation(width, height) {
-	$('#triangle-1').animate({right: -width}, 3700);
-	$('#triangle-2').animate({top: -height}, 4300);
-	$('#triangle-3').animate({top: -height}, 4000);
-	$('#triangle-4').animate({top: -height}, 2000);
-	$('#triangle-5').animate({right: -width}, 3800);
-	$('#triangle-6').animate({right: -width}, 2000);
-	$('#triangle-7').animate({left: -width}, 1700);
-	$('#triangle-8').animate({bottom: -height}, 3500);
-	$('#triangle-9').animate({top: -height}, 3500);
-	$('#triangle-10').animate({left: -width}, 2500);
-
-	$('#clock').fadeIn(6000, function() {
-        $('#intro').css({display: "none"});
-		arrowDownAnimation();
-		showReligionsLogo();
-	});
-}
-
-function showReligionsLogo() {
-	var logo = $("#logo");
-	
-	if (curr == 3) {
-		logo.removeClass();
-		logo.addClass("base");
-		logo.fadeIn(4000, function() {
-			logoAnimation();
-		});
-	}
-	
-	var religion = religions[curr];
-	var religionName = religion.name;
-	
-	logo.removeClass();
-	logo.addClass(religionName);
-	
-	logo.fadeIn(4000, function() {
-        logo.fadeOut(4000, function() {
-			++curr;
-			showReligionsLogo();
-		});
-	});
+function arrowDownAnimation() {
+	$('#arrow-down').fadeToggle(2000);
+	setTimeout('arrowDownAnimation()', 2000);
 }
 
 function logoAnimation() {
-    var logoCSSClass = "";
+	var logo = $("#logo");
+	logo.removeClass();
+
     var now = new Date();
     var nowHours = now.getHours();
     var nowMinutes = now.getMinutes();
@@ -81,23 +44,60 @@ function logoAnimation() {
             var prayerHours = parseInt(time[0]);
             var prayerMinutes = parseInt(time[1]);
 
-            if (nowHours == prayerHours && ((prayerMinutes <= nowMinutes) && (nowMinutes <= (prayerMinutes+5)))) {
-                logoCSSClass += ((logoCSSClass) ? "_" : "") + religionName;
+            if (nowHours == prayerHours && ((prayerMinutes <= nowMinutes) && (nowMinutes <= (prayerMinutes+_prayerTimeDelta)))) {
+            	logo.addClass(religionName);
                 break;
             }
         }
     }
 
-    var logo = $("#logo");
-    logo.removeClass();
-    logo.addClass((logoCSSClass) ? logoCSSClass : "base");
+    if (!logo.hasClass()) {
+    	logo.addClass("base");
+    }
 
     setTimeout('logoAnimation()', 60000);
 }
 
-function arrowDownAnimation() {
-	$('#arrow-down').fadeToggle(2000);
-	setTimeout('arrowDownAnimation()', 2000);
+function logoIntroAnimation(curr) {
+	var logo = $("#logo");
+	
+	if (curr == 3) {
+		logo.removeClass();
+		logo.addClass("base");
+		logo.fadeIn(500, function() {
+			$('#intro').css({display: "none"});
+			logoAnimation();
+			$('#clock').fadeIn(2000);
+			arrowDownAnimation();
+		});
+		return;
+	}
+	
+	var religionName = religions[curr].name;
+	
+	logo.removeClass();
+	logo.addClass(religionName);
+	
+	logo.fadeIn(1000, function() {
+        logo.fadeOut(1000, function() {
+			logoIntroAnimation(++curr);
+		});
+	});
+}
+
+function introAnimation(width, height) {
+	$('#triangle-1').animate({right: -width}, 3700);
+	$('#triangle-2').animate({top: -height}, 4300);
+	$('#triangle-3').animate({top: -height}, 4000);
+	$('#triangle-4').animate({top: -height}, 2000);
+	$('#triangle-5').animate({right: -width}, 3800);
+	$('#triangle-6').animate({right: -width}, 2000);
+	$('#triangle-7').animate({left: -width}, 1700);
+	$('#triangle-8').animate({bottom: -height}, 3500);
+	$('#triangle-9').animate({top: -height}, 3500);
+	$('#triangle-10').animate({left: -width}, 2500);
+
+	setTimeout('logoIntroAnimation(0)', 1000);
 }
 
 $(document).ready(function() {
@@ -121,12 +121,6 @@ $(document).ready(function() {
 		"left": width/2 - (logo.width()/2)
 	});
 	
-	var singleLogo = $("#singleLogo");
-	singleLogo.css({
-		"top": height/2 - (logo.height()/2),
-		"left": width/2 - (logo.width()/2)
-	});
-	
     var arrowDown = $("#arrow-down");
     arrowDown.css({
 		"left": width/2 - arrowDown.width()/2
@@ -134,5 +128,4 @@ $(document).ready(function() {
 
 	clock();
 	introAnimation(screen.width, screen.height);
-    logoAnimation();
 });

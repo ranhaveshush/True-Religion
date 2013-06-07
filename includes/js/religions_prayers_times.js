@@ -9,7 +9,7 @@ religions = [
             },
             {
                 "name": "alduhur",
-                "start_time": "11:45"
+                "start_time": "10:23"
             },
             {
                 "name": "alasar",
@@ -42,7 +42,7 @@ religions = [
             },
             {
                 "name": "prayer3",
-                "start_time": "08:00"
+                "start_time": "10:29"
             },
             {
                 "name": "prayer4",
