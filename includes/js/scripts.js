@@ -27,6 +27,7 @@ function arrowDownAnimation() {
 function logoAnimation() {
 	var logo = $("#logo");
 	logo.removeClass();
+	logo.addClass("base");
 
     var now = new Date();
     var nowHours = now.getHours();
@@ -49,10 +50,6 @@ function logoAnimation() {
                 break;
             }
         }
-    }
-
-    if (!logo.hasClass()) {
-    	logo.addClass("base");
     }
 
     setTimeout('logoAnimation()', 60000);
