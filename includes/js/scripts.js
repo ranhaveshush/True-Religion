@@ -55,29 +55,46 @@ function logoAnimation() {
     setTimeout('logoAnimation()', 60000);
 }
 
-function logoIntroAnimation(curr) {
-	var logo = $("#logo");
+function introLogoAnimation(curr) {
+	var introLogo = $("#intro-logo");
+	var introLogoClass;
 	
-	if (curr == 3) {
-		logo.removeClass();
-		logo.addClass("base");
-		logo.fadeIn(500, function() {
-			$('#intro').css({display: "none"});
-			logoAnimation();
-			$('#clock').fadeIn(2000);
-			arrowDownAnimation();
-		});
-		return;
+	switch (curr) {
+		case 0:
+			introLogoClass = "intro-islam";
+			break;
+		case 1:
+			introLogoClass = "intro-christianity";
+
+			break;
+		case 2:
+			introLogoClass = "intro-judaism";
+			break;
+		case 3:
+			introLogoClass = "intro-all-religions";
+			break;
+		case 4:
+			introLogoClass = "intro-base";
+			introLogo.removeClass();
+			introLogo.addClass(introLogoClass);
+			introLogo.fadeIn(1000, function() {
+				introLogo.fadeOut(1000, function() {
+					$('#logo').fadeIn(2000, function() {
+						logoAnimation();
+					});
+					$('#clock').fadeIn(2000);
+					arrowDownAnimation();
+					$('#intro').css({display: "none"});
+				});
+			});
+			return;
 	}
 	
-	var religionName = religions[curr].name;
-	
-	logo.removeClass();
-	logo.addClass(religionName);
-	
-	logo.fadeIn(1000, function() {
-        logo.fadeOut(1000, function() {
-			logoIntroAnimation(++curr);
+	introLogo.removeClass();
+	introLogo.addClass(introLogoClass);
+	introLogo.fadeIn(1000, function() {
+        introLogo.fadeOut(1000, function() {
+			introLogoAnimation(++curr);
 		});
 	});
 }
@@ -94,7 +111,7 @@ function introAnimation(width, height) {
 	$('#triangle-9').animate({top: -height}, 3500);
 	$('#triangle-10').animate({left: -width}, 2500);
 
-	setTimeout('logoIntroAnimation(0)', 1000);
+	setTimeout('introLogoAnimation(0)', 3000);
 }
 
 $(document).ready(function() {
@@ -110,6 +127,12 @@ $(document).ready(function() {
 	$("#content").css({
 		"width": width,
 		"height": height
+	});
+
+	var introLogo = $("#intro-logo");
+	introLogo.css({
+		"top": height/2 - (introLogo.height()/2),
+		"left": width/2 - (introLogo.width()/2)
 	});
 
     var logo = $("#logo");

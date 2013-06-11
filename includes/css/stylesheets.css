@@ -1,6 +1,7 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	border: none;
 }
 
 body {
@@ -104,6 +105,32 @@ body {
 	left: 0px;
 }
 
+#intro-logo {
+	width: 888px;
+	height: 592px;
+	position: absolute;
+}
+
+.intro-base {
+    background: url(../imgs/logo/intro/logo_base.png) no-repeat center center;
+}
+
+.intro-all-religions {
+	background: url(../imgs/logo/intro/all_religions.png) no-repeat;
+}
+
+.intro-islam {
+	background: url(../imgs/logo/intro/islam.png) no-repeat left center;
+}
+
+.intro-christianity {
+	background: url(../imgs/logo/intro/christianity.png) no-repeat center center;
+}
+
+.intro-judaism {
+	background: url(../imgs/logo/intro/judaism.png) no-repeat right center;
+}
+
 #content {
 	position: absolute;
 }
@@ -122,27 +149,20 @@ body {
 	display: none;
 }
 
-#singleLogo {
-	width: 228px;
-	height: 172px;
-	position: absolute;
-	display: none;
-}
-
 .base {
-    background: url(../imgs/logo/logo_base.png);
+    background: url(../imgs/logo/logo_base.png)  no-repeat;
 }
 
 .islam {
-	background: url(../imgs/logo/islam.png);
+	background: url(../imgs/logo/islam.png)  no-repeat;
 }
 
 .christianity {
-	background: url(../imgs/logo/christianity.png);
+	background: url(../imgs/logo/christianity.png)  no-repeat;
 }
 
 .judaism {
-	background: url(../imgs/logo/judaism.png);
+	background: url(../imgs/logo/judaism.png)  no-repeat;
 }
 
 #arrow-down {

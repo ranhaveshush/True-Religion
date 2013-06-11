@@ -50,7 +50,7 @@ religions = [
             },
             {
                 "name": "prayer5",
-                "start_time": "11:08"
+                "start_time": "12:20"
             }
         ]
     },
@@ -63,7 +63,7 @@ religions = [
             },
             {
                 "name": "minha",
-                "start_time": "11:48"
+                "start_time": "12:19"
             },
             {
                 "name": "arvit",
