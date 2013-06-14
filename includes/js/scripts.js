@@ -4,10 +4,16 @@ var _width = 1000,
 
 var _prayerTimeDelta = 5;
 
-function resizeHeight() {
+function layout() {
     var pages = $('[id^="page-"]');
-    _height *= pages.length;
-    $('body').height(_height);
+    for (var i=1; i <= pages.length; ++i) {
+        $('#page-'+i).css({
+            width: _width+"px",
+            height: _height+"px",
+            top: (_height*i)+"px",
+            display: "block"
+        });
+    }
 }
 
 function clock() {
@@ -89,7 +95,7 @@ function introLogoAnimation(curr) {
 			introLogo.addClass(introLogoClass);
 			introLogo.fadeIn(1000, function() {
 				introLogo.fadeOut(1000, function() {
-                    resizeHeight();
+                    layout();
 					$('#logo').fadeIn(2000, function() {
 						logoAnimation();
 					});
@@ -162,5 +168,16 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var scrollTop = $(this).scrollTop();
         console.log(scrollTop);
+
+        // first page
+        if (_height <= scrollTop && scrollTop < _height*2) {
+
+        // second page
+        } else if (_height*2 <= scrollTop && scrollTop < _height*3) {
+
+        // third page
+        } else if (_height*3 <= scrollTop) {
+
+        }
     });
 });

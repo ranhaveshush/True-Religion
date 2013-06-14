@@ -75,7 +75,7 @@ body {
 	background: url(../imgs/triangles/triangle_7.png);
 	position: absolute;
 	top: 0px;
-	right: 0px;
+	left: -250px;
 }
 
 #triangle-8 {
@@ -174,16 +174,57 @@ body {
 	display: none;
 }
 
-#page-1 {
+#page-1, #page-2, #page-3 {
+    position: absolute;
     display: none;
 }
 
-#page-2 {
-    display: none;
+#page-1 .title, #page-1 .subtitle, #page-1 .details {
+    position: absolute;
 }
 
-#page-3 {
-    display: none;
+#page-1 .title, #page-1 .subtitle {
+    top: 115px;
+}
+
+#page-1 .title, #page-1 .details {
+    left: 160px;
+}
+
+#page-1 .details {
+    width: 640px;
+    top: 325px;
+}
+
+#page-1 .subtitle {
+    width: 415px;
+    right: 610px;
+    color: yellow;
+}
+
+#page-2 .title, #page-2 #prayer-names-title, , #page-2 #prayer-times-title, #page-2 #logo-images-title,
+#page-2 #prayer-names, #page-2 #prayer-times {
+    position: absolute;
+}
+
+#page-2 .title {
+    top: 20px;
+}
+
+#page-2 #prayer-names-title, #page-2 #prayer-times-title, #page-2 #logo-images-title {
+    top: 80px;
+}
+
+#page-2 .title, #page-2 #prayer-names-title, #page-2 #prayer-names {
+    left: 160px;
+}
+
+#page-2 #prayer-times-title, #page-2 #prayer-times {
+    left: 425px;
+}
+
+#page-2 logo-images {
+    left: 680px;
 }
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
