@@ -1,4 +1,20 @@
+var _width = 1000,
+    _height = 700,
+    _scrollWidth = 18;
+
 var _prayerTimeDelta = 5;
+
+function layout() {
+    var pages = $('[id^="page-"]');
+    for (var i=1; i <= pages.length; ++i) {
+        $('#page-'+i).css({
+            width: _width+"px",
+            height: _height+"px",
+            top: (_height*i)+"px",
+            display: "block"
+        });
+    }
+}
 
 function clock() {
 	var now = new Date();
@@ -14,7 +30,7 @@ function clock() {
 
 	var nowStr = day + " : " + hours + " : " + minutes + " : " + seconds;
 
-	$("#clock span:first-child").text(nowStr);
+	$('#clock span:first-child').text(nowStr);
 
 	setTimeout('clock()', 995);
 }
@@ -79,6 +95,7 @@ function introLogoAnimation(curr) {
 			introLogo.addClass(introLogoClass);
 			introLogo.fadeIn(1000, function() {
 				introLogo.fadeOut(1000, function() {
+                    layout();
 					$('#logo').fadeIn(2000, function() {
 						logoAnimation();
 					});
@@ -115,37 +132,52 @@ function introAnimation(width, height) {
 }
 
 $(document).ready(function() {
-	var scrollWidth = 18;
-	var width = window.innerWidth - scrollWidth;
-	var height = window.innerHeight;
+	_width = window.innerWidth - _scrollWidth;
+	_height = window.innerHeight;
 
 	$("#intro").css({
-		"width": width + 18,
-		"height": height
+		"width": _width + 18,
+		"height": _height
 	});
 
 	$("#content").css({
-		"width": width,
-		"height": height
+		"width": _width,
+		"height": _height
 	});
 
 	var introLogo = $("#intro-logo");
 	introLogo.css({
-		"top": height/2 - (introLogo.height()/2),
-		"left": width/2 - (introLogo.width()/2)
+		"top": _height/2 - (introLogo.height()/2),
+		"left": _width/2 - (introLogo.width()/2)
 	});
 
     var logo = $("#logo");
 	logo.css({
-		"top": height/2 - (logo.height()/2),
-		"left": width/2 - (logo.width()/2)
+		"top": _height/2 - (logo.height()/2),
+		"left": _width/2 - (logo.width()/2)
 	});
 	
     var arrowDown = $("#arrow-down");
     arrowDown.css({
-		"left": width/2 - arrowDown.width()/2
+		"left": _width/2 - arrowDown.width()/2
 	});
 
 	clock();
 	introAnimation(screen.width, screen.height);
+
+    $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+        console.log(scrollTop);
+
+        // first page
+        if (_height <= scrollTop && scrollTop < _height*2) {
+
+        // second page
+        } else if (_height*2 <= scrollTop && scrollTop < _height*3) {
+
+        // third page
+        } else if (_height*3 <= scrollTop) {
+
+        }
+    });
 });

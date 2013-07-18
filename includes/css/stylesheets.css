@@ -10,6 +10,27 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(20,74,79,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(20,74,79,0.4);
+}
+
 #intro {
 	position: absolute;
 	overflow: hidden;
@@ -75,7 +96,7 @@ body {
 	background: url(../imgs/triangles/triangle_7.png);
 	position: absolute;
 	top: 0px;
-	right: 0px;
+	left: -250px;
 }
 
 #triangle-8 {
@@ -172,6 +193,95 @@ body {
 	position: fixed;
 	bottom: 20px;
 	display: none;
+}
+
+#page-1, #page-2, #page-3 {
+    position: absolute;
+    display: none;
+}
+
+#page-1 .title, #page-1 .subtitle, #page-1 .details {
+    position: absolute;
+}
+
+#page-1 .title, #page-1 .subtitle {
+    top: 115px;
+}
+
+#page-1 .title, #page-1 .details {
+    left: 160px;
+}
+
+#page-1 .details {
+    width: 640px;
+    top: 325px;
+}
+
+#page-1 .subtitle {
+    width: 415px;
+    right: 610px;
+    color: yellow;
+}
+
+#page-2 .title, #page-2 #prayer-names-title, #page-2 #prayer-times-title, #page-2 #logo-images-title,
+#page-2 #prayer-names, #page-2 #prayer-times, #page-2 .logo-images {
+    position: absolute;
+}
+
+#page-2 .title {
+    top: 20px;
+}
+
+#page-2 #prayer-names-title, #page-2 #prayer-times-title, #page-2 #logo-images-title {
+    top: 80px;
+    color: yellow;
+}
+
+#page-2 #prayer-names, #page-2 #prayer-times, #page-2 .logo-images {
+    top: 120px;
+}
+
+#page-2 #judaism-prayer-names {
+    top: px;
+}
+
+#page-2 #christianity-prayer-names {
+    top: px;
+}
+
+#page-2 .title, #page-2 #prayer-names-title, #page-2 #prayer-names {
+    left: 160px;
+}
+
+#page-2 #prayer-times-title, #page-2 #prayer-times {
+    left: 425px;
+}
+
+#page-2 #logo-images-title, #page-2 .logo-images {
+    left: 680px;
+}
+
+#page-2 .logo-images img {
+    display: block;
+}
+
+#page-3 .title, #page-3 .logo-images {
+    position: absolute;
+    width: 615px;
+    left: 160px;
+}
+
+#page-3 .title {
+    top: 45px;
+    color: #09705e;
+}
+
+#page-3 .logo-images {
+    top: 170px;
+}
+
+#page-3 .logo-images img {
+    display: inline-block;
 }
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
