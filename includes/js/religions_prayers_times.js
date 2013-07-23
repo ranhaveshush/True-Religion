@@ -5,7 +5,7 @@ religions = [
         "prayers": [
             {
                 "name": "alsubah",
-                "start_time": "11:46"
+                "start_time": "20:45"
             },
             {
                 "name": "alduhur",
@@ -34,7 +34,7 @@ religions = [
         "prayers": [
             {
                 "name": "prayer1",
-                "start_time": "06:00"
+                "start_time": "19:03"
             },
             {
                 "name": "prayer2",
@@ -42,7 +42,7 @@ religions = [
             },
             {
                 "name": "prayer3",
-                "start_time": "11:47"
+                "start_time": "20:47"
             },
             {
                 "name": "prayer4",
@@ -59,7 +59,7 @@ religions = [
         "prayers": [
             {
                 "name": "shaharit",
-                "start_time": "06:00"
+                "start_time": "19:03"
             },
             {
                 "name": "minha",
@@ -71,7 +71,7 @@ religions = [
             },
             {
                 "name": "arvit",
-                "start_time": "00:47"
+                "start_time": "20:57"
             }
         ]
     }

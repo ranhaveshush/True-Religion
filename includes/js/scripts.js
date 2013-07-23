@@ -1,8 +1,7 @@
 var _width = 1000,
     _height = 700,
-    _scrollWidth = 18;
-
-var _prayerTimeDelta = 5;
+    _scrollWidth = 18,
+	_prayerTimeDelta = 5;
 
 function layout() {
     var pages = $('[id^="page-"]');
@@ -41,10 +40,10 @@ function arrowDownAnimation() {
 }
 
 function logoAnimation() {
-	var logo = $("#logo");
-	logo.removeClass();
-	logo.addClass("base");
+	removeLogos();
 
+	var logo = $("#logo");
+	
     var now = new Date();
     var nowHours = now.getHours();
     var nowMinutes = now.getMinutes();
@@ -62,13 +61,18 @@ function logoAnimation() {
             var prayerMinutes = parseInt(time[1]);
 
             if (nowHours == prayerHours && ((prayerMinutes <= nowMinutes) && (nowMinutes <= (prayerMinutes+_prayerTimeDelta)))) {
-            	logo.addClass(religionName);
-                break;
+            	$('#' + religionName + '-logo').show();
             }
         }
     }
 
     setTimeout('logoAnimation()', 60000);
+}
+
+function removeLogos() {
+	for (var i=0; i < religions.length; ++i) {
+		$('#' + religions[i].name + '-logo').hide();
+	}
 }
 
 function introLogoAnimation(curr) {
@@ -132,11 +136,12 @@ function introAnimation(width, height) {
 }
 
 $(document).ready(function() {
+	
 	_width = window.innerWidth - _scrollWidth;
 	_height = window.innerHeight;
 
 	$("#intro").css({
-		"width": _width + 18,
+		"width": _width + _scrollWidth,
 		"height": _height
 	});
 
@@ -144,7 +149,7 @@ $(document).ready(function() {
 		"width": _width,
 		"height": _height
 	});
-
+	
 	var introLogo = $("#intro-logo");
 	introLogo.css({
 		"top": _height/2 - (introLogo.height()/2),
@@ -164,20 +169,5 @@ $(document).ready(function() {
 
 	clock();
 	introAnimation(screen.width, screen.height);
-
-    $(window).scroll(function() {
-        var scrollTop = $(this).scrollTop();
-        console.log(scrollTop);
-
-        // first page
-        if (_height <= scrollTop && scrollTop < _height*2) {
-
-        // second page
-        } else if (_height*2 <= scrollTop && scrollTop < _height*3) {
-
-        // third page
-        } else if (_height*3 <= scrollTop) {
-
-        }
-    });
+  
 });

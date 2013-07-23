@@ -1,3 +1,0 @@
-1. call logoAnimation function after showReligionsLogo finished (curr=3).
-2. display clock after triangles moved out of the screen.
-3. replace old photos to new one.
