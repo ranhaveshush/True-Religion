@@ -4,28 +4,28 @@ religions = [
         "name": "islam",
         "prayers": [
             {
-                "name": "alsubah",
-                "start_time": "11:46"
+                "name": "Alfager",
+                "start_time": "04:08"
             },
             {
-                "name": "alduhur",
-                "start_time": "10:23"
+                "name": "Alshoroq",
+                "start_time": "05:41"
             },
             {
-                "name": "alasar",
-                "start_time": "14:30"
+                "name": "Alzuhur",
+                "start_time": "12:37"
             },
             {
-                "name": "almagrib",
-                "start_time": "16:45"
+                "name": "Alaser",
+                "start_time": "16:17"
             },
             {
-                "name": "alashaa",
-                "start_time": "18:00"
+                "name": "Almagreb",
+                "start_time": "19:32"
             },
             {
-                "name": "arvit",
-                "start_time": "00:22"
+                "name": "Aleisha",
+                "start_time": "21:00"
             }
         ]
     },
@@ -33,24 +33,8 @@ religions = [
         "name": "christianity",
         "prayers": [
             {
-                "name": "prayer1",
-                "start_time": "06:00"
-            },
-            {
-                "name": "prayer2",
-                "start_time": "00:46"
-            },
-            {
-                "name": "prayer3",
-                "start_time": "11:47"
-            },
-            {
-                "name": "prayer4",
-                "start_time": "09:00"
-            },
-            {
-                "name": "prayer5",
-                "start_time": "12:20"
+                "name": "Sunday Morning",
+                "start_time": "09:30"
             }
         ]
     },
@@ -58,20 +42,16 @@ religions = [
         "name": "judaism",
         "prayers": [
             {
-                "name": "shaharit",
+                "name": "Shakhrit",
                 "start_time": "06:00"
             },
             {
-                "name": "minha",
-                "start_time": "12:19"
+                "name": "Minchah",
+                "start_time": "13:30"
             },
             {
-                "name": "arvit",
-                "start_time": "20:00"
-            },
-            {
-                "name": "arvit",
-                "start_time": "00:47"
+                "name": "Arvit",
+                "start_time": "19:30"
             }
         ]
     }

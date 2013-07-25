@@ -4,6 +4,10 @@
 		<title>True Religion</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="includes/css/stylesheets.css">
+		<script type="text/javascript" src="includes/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="includes/js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script type="text/javascript" src="includes/js/religions_prayers_times.js"></script>
+		<script type="text/javascript" src="includes/js/scripts.js"></script>
 	</head>
 	<body>
 		<div id="intro">
@@ -26,12 +30,19 @@
 				<span>Day Hr Min Sec</span>
 			</div>
 
-			<a href="index.html"><div class="base" id="logo"></div></a>
+			<a href="index.html">
+				<section id="logo">
+					<img id="base-logo" src="includes/imgs/logo/logo_base.png">
+					<img id="christianity-logo" src="includes/imgs/logo/christianity.png">
+					<img id="judaism-logo" src="includes/imgs/logo/judaism.png">
+					<img id="islam-logo" src="includes/imgs/logo/islam.png">
+				</section>
+			</a>
 
 			<section id="page-1">
-				<section class="title" data-speed="10">The Logo</section>
-				<article class="subtitle">The Idea behind the logo was to allow people a place to pray and connect with God before their journey on the plane</article>
-				<article class="details">
+				<section class="title" id="page-1-title">The Logo</section>
+				<article class="subtitle" id="page-1-subtitle">The Idea behind the logo was to allow people a place to pray and connect with God before their journey on the plane</article>
+				<article class="details" id="page-1-details">
                     <p>
                         A lot of research and exploration has been done in order to understand the meaning and importance of religion in people's lives.<br>
                         Symbols of religions, Islam, Christianity, and Judaism was very important value in the work process.<br>
@@ -41,8 +52,8 @@
 			</section>
 
 			<section id="page-2">
-				<section class="title">
-                    <h3>How it works</h3>
+				<section>
+                    <h3 class="title" id="page-2-title">How it works</h3>
                 </section>
                 <section id="prayer-names-title"><span>Prayer Names</span></section>
                 <section id="prayer-times-title"><span>Prayer Times</span></section>
@@ -50,8 +61,8 @@
 				<section id="prayer-names">
 					<section id="islam-prayer-names">
                         <span>
-                            Altager<br>
-                            Alshorog<br>
+                            Alfager<br>
+                            Alshoroq<br>
                             Alzuhur<br>
                             Alaser<br>
                             Almagreb<br>
@@ -67,7 +78,8 @@
 					</section>
 					<section id="christianity-prayer-names">
                         <span>
-                            Republic prayer / Sunday morning
+                            Republic prayer<br>
+                            Sunday morning
                         </span>
 					</section>
 				</section>
@@ -95,16 +107,16 @@
                         </span>
 					</section>
 				</section>
-				<section class="logo-images">
-					<img src="includes/imgs/islam.png">
-					<img src="includes/imgs/judaism.png">
-					<img src="includes/imgs/christianity.png">
+				<section id="page-2-logo-images" class="logo-images">
+					<img id="islam-image" src="includes/imgs/islam.png">
+					<img id="judaism-image" src="includes/imgs/judaism.png">
+					<img id="christianity-image" src="includes/imgs/christianity.png">
 				</section>
 			</section>
 
 			<section id="page-3">
-				<section class="title">In other conditions, when there are two prayers at the same time, the logo lights up and shows two or three symbols of two or three religions.</section>
-				<section class="logo-images">
+				<section class="title" id="page-3-title">In other conditions, when there are two prayers at the same time, the logo lights up and shows two or three symbols of two or three religions.</section>
+				<section id="page-3-logo-images" class="logo-images">
 					<img src="includes/imgs/islam_judaism.png">
 					<img src="includes/imgs/islam_christianity.png">
 					<img src="includes/imgs/christianity_judaism.png">
@@ -116,9 +128,5 @@
 		<footer>
 			<div id="arrow-down"></div>
 		</footer>
-		<script type="text/javascript" src="includes/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
-		<script type="text/javascript" src="includes/js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script type="text/javascript" src="includes/js/religions_prayers_times.js"></script>
-		<script type="text/javascript" src="includes/js/scripts.js"></script>
 	</body>
 </html>
